@@ -19,8 +19,8 @@ public class OrderResource {
     @Autowired
     private OrderRepository orderRepository;
 
-    @GetMapping(value = "/restaurant/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<Order>> listOrdersByRestaurant (@PathVariable Long id) {
+    @GetMapping( produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<Order>> listOrdersByRestaurant () {
         List<Order> orders = new ArrayList<>();
         orders =  orderRepository.findAll();
         return ResponseEntity.ok().body(orders);

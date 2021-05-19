@@ -24,5 +24,5 @@ public class Order {
     private LocalDate dateOrder;
     private String dishPhoto;
     private BigDecimal price;
-    private Restaurant restaurant;
+
 }
