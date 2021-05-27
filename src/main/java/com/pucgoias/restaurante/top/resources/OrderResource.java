@@ -19,17 +19,16 @@ public class OrderResource {
     @Autowired
     private OrderRepository orderRepository;
 
-    @GetMapping( produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<Order>> listOrdersByRestaurant () {
-        List<Order> orders = new ArrayList<>();
-        orders =  orderRepository.findAll();
+    @GetMapping( value = "/all", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<Order>> listOrders() {
+        List<Order> orders = orderRepository.findAll();
         return ResponseEntity.ok().body(orders);
     }
 
-    @PostMapping
+    @PostMapping(value = "/insert")
     public ResponseEntity<Order> insert(@RequestBody Order order) {
-        Order orderNew = orderRepository.save(order);
-        return ResponseEntity.ok().body(orderNew);
+        Order newOrder = orderRepository.save(order);
+        return ResponseEntity.ok().body(newOrder);
     }
 
     @DeleteMapping("/{id}")

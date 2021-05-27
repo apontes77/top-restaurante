@@ -44,7 +44,7 @@ public class TopApplication implements CommandLineRunner {
 		Order o2 = new Order(null,
 				"pizza portuguesa que beleza",
 				LocalDate.now(),
-				"bit.ly/my-photo",
+				"https://drive.google.com/file/d/1oZf_IsktvBok83mddbRJ9LCcztHu2u2T/view?usp=sharing",
 				new BigDecimal("34.90"));
 
 		Restaurant restaurant1 = new Restaurant(null,

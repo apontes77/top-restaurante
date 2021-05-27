@@ -24,7 +24,7 @@ public class RestauranteResource {
         return ResponseEntity.ok().body(restaurants);
     }
 
-    @PostMapping
+    @PostMapping(value = "/insert")
     public ResponseEntity<Restaurant> insert(@RequestBody Restaurant restaurant) {
         Restaurant restaurantNew = restaurantRepository.save(restaurant);
         return ResponseEntity.ok().body(restaurantNew);
