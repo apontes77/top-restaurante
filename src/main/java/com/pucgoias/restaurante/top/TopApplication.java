@@ -38,14 +38,50 @@ public class TopApplication implements CommandLineRunner {
 		Order o1 = new Order(null,
 				"pizza calabresa que beleza",
 				LocalDate.now(),
-				"bit.ly/my-photo",
-				new BigDecimal("34.90"));
+				"https://app-infracoes-transito.s3.us-east-2.amazonaws.com/imagem1.png",
+				34.90);
 
 		Order o2 = new Order(null,
 				"pizza portuguesa que beleza",
 				LocalDate.now(),
 				"https://drive.google.com/file/d/1oZf_IsktvBok83mddbRJ9LCcztHu2u2T/view?usp=sharing",
-				new BigDecimal("34.90"));
+				34.90);
+
+		Order o3 = new Order(null,
+				"pizza calabresa que beleza",
+				LocalDate.now(),
+				"https://app-infracoes-transito.s3.us-east-2.amazonaws.com/imagem1.png",
+				34.90);
+
+		Order o4 = new Order(null,
+				"pizza calabresa que beleza",
+				LocalDate.now(),
+				"https://app-infracoes-transito.s3.us-east-2.amazonaws.com/imagem1.png",
+				34.90);
+
+		Order o5 = new Order(null,
+				"pizza calabresa que beleza",
+				LocalDate.now(),
+				"https://app-infracoes-transito.s3.us-east-2.amazonaws.com/imagem1.png",
+				34.90);
+
+		Order o6 = new Order(null,
+				"pizza calabresa que beleza",
+				LocalDate.now(),
+				"https://app-infracoes-transito.s3.us-east-2.amazonaws.com/imagem1.png",
+				34.90);
+
+		Order o7 = new Order(null,
+				"pizza calabresa que beleza",
+				LocalDate.now(),
+				"https://app-infracoes-transito.s3.us-east-2.amazonaws.com/imagem1.png",
+				34.90);
+
+		Order o8= new Order(null,
+				"pizza calabresa que beleza",
+				LocalDate.now(),
+				"https://app-infracoes-transito.s3.us-east-2.amazonaws.com/imagem1.png",
+				34.90);
 
 		Restaurant restaurant1 = new Restaurant(null,
 				"TOP RESTAURANTE",
@@ -58,6 +94,6 @@ public class TopApplication implements CommandLineRunner {
 		List<Restaurant> restaurants = new ArrayList<>(Arrays.asList(restaurant1, restaurant2));
 
 		restaurantRepository.saveAll(restaurants);
-		orderRepository.saveAll(Arrays.asList(o1, o2));
+		orderRepository.saveAll(Arrays.asList(o1, o2, o3, o4, o5, o6, o7, o8));
 	}
 }

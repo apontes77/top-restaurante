@@ -1,5 +1,6 @@
 package com.pucgoias.restaurante.top.models;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,6 +9,7 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.Date;
 
 
 @Getter
@@ -23,6 +25,6 @@ public class Order {
     private String description;
     private LocalDate dateOrder;
     private String dishPhoto;
-    private BigDecimal price;
+    private Double price;
 
 }
